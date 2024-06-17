@@ -24,7 +24,10 @@ import CourseCard from "@/components/CourseCard";
 import AchiveCard from "@/components/AchiveCard";
 
 const ServiceContainer = forwardRef<HTMLDivElement>((props, ref) => (
-  <Flex className="w-full justify-start pt-14 flex-col items-center bg-white">
+  <Flex
+    className="w-full justify-start pt-14 flex-col items-center bg-white"
+    ref={ref}
+  >
     <Typography className="font-semibold text-[24px] leading-[20px] text-[#6E6E6E] font-poppins">
       OUR SERVICES
     </Typography>

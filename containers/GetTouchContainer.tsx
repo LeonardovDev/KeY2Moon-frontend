@@ -21,7 +21,7 @@ const GetTouchContainer = forwardRef<HTMLDivElement>((props, ref) => {
   const stars = Array.from({ length: 5 });
 
   return (
-    <Flex className="flex flex-col space-y-0 w-full">
+    <Flex className="flex flex-col space-y-0 w-full" ref={ref}>
       <Flex className="px-[50px] py-[107px] h-[703px] space-x-0 bg-[#FAF9F6] justify-center">
         <Flex className="bg-[#F0E1C9] items-end justify-center relative hidden md:flex">
           <Image
@@ -52,7 +52,9 @@ const GetTouchContainer = forwardRef<HTMLDivElement>((props, ref) => {
       </Flex>
       <Flex className="bg-[#092332] flex-col pl-[30px] md:pl-[162px] py-[45px] relative">
         <Flex className="flex-col md:flex-row md:space-x-[80px] space-y-10 items-start relative">
-          <Logo className="" />
+          <div className=" cursor-pointer" onClick={props.handleTop}>
+            <Logo className="" />
+          </div>
           <Flex className="flex space-y-[50px] items-start justify-start flex-1">
             <Flex className=" flex-col md:flex-row space-x-[100px]">
               <Flex className="flex-row md:flex-col justify-center md:justify-start md:space-y-[8px] space-x-5 md:space-x-0 items-center">

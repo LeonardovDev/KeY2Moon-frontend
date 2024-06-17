@@ -59,23 +59,6 @@ const WhyUsContainer = () => {
         alt="group"
         className="w-[30%] h-auto absolute bottom-[100px] right-[150px] min-w-[350px] hidden lg:block"
       />
-      {/* <Flex className="absolute w-[25%] h-[33%] bottom-[10%] right-[10%]">
-        <Image
-          src={Girl}
-          alt="girl"
-          className="absolute bottom-0 left-0 w-[40%]"
-        />
-        <Image
-          src={PeopleGroup}
-          alt="people group"
-          className="absolute top-0 right-0 w-[70%]"
-        />
-        <Image
-          src={DiscountRate}
-          alt="discount rate"
-          className=" absolute top-[5%] left-[15%]"
-        />
-      </Flex> */}
     </Flex>
   );
 };

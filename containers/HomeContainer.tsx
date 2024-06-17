@@ -16,7 +16,7 @@ import ProjectWrappter from "@/public/Images/Homepage/ProjectWrapper.svg";
 import HomeGirl from "@/public/Images/Homepage/HomeGirl.svg";
 
 const HomeContainer = forwardRef<HTMLDivElement>((props, ref) => (
-  <>
+  <div ref={ref}>
     <div className="w-screen h-screen flex bg-black">
       <div className="flex-1 bg-darkblue h-full relative">
         <Flex className="flex flex-1 bg-[#092332] -z-20">
@@ -99,7 +99,7 @@ const HomeContainer = forwardRef<HTMLDivElement>((props, ref) => (
         </p>
       </div>
     </div>
-  </>
+  </div>
 ));
 
 export default HomeContainer;

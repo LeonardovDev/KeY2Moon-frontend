@@ -26,7 +26,6 @@ export default function Home() {
   };
   const handleClick = (e: React.MouseEvent<HTMLElement>, menuID: number) => {
     e.preventDefault();
-    console.log(menuID);
     setSelectedMenu(menuID);
     switch (menuID) {
       case 0:
@@ -69,7 +68,7 @@ export default function Home() {
       <PartnerContainer />
       <WhyUsContainer />
       <OfferContainer ref={blogRef} />
-      <GetTouchContainer ref={contactRef} />
+      <GetTouchContainer ref={contactRef} handleTop={handleTop} />
     </div>
   );
 }

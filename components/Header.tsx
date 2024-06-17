@@ -22,10 +22,6 @@ interface IHeaderProps {
 }
 
 const Header = ({ selectedMenu, handleClick }: IHeaderProps) => {
-  const [menu, setMenu] = useState(false);
-
-  const onClick = () => {};
-
   return (
     <>
       <div className="hidden xl:flex absolute w-full justify-center items-center z-50 ">
