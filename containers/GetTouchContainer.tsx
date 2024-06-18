@@ -1,6 +1,9 @@
 import { Flex, Input, Typography } from "antd";
 import Image from "next/image";
-import React, { RefObject } from "react";
+import React, { RefObject, useState } from "react";
+
+import axios from "axios";
+
 import Woman from "@/public/Images/GetTouchPage/Woman.svg";
 import Ellipse from "@/public/Images/GetTouchPage/Ellipse.svg";
 import Star from "@/public/Images/GetTouchPage/Star.svg";
@@ -9,13 +12,12 @@ import Camera from "@/public/Images/GetTouchPage/Camera.svg";
 import Facebook from "@/public/Images/GetTouchPage/Facebook.svg";
 import Twitter from "@/public/Images/GetTouchPage/Twitter.svg";
 import Student from "@/public/Images/GetTouchPage/Student.svg";
-import KeyUnderline from "@/public/Images/GetTouchPage/KeyUnderline.svg";
 
-import RButton from "@/components/RButton";
-
-import { ArrowRightIcon } from "@heroicons/react/16/solid";
-import UnderlinedText from "@/components/UnderlinedText";
+import { ChevronRightIcon } from "@heroicons/react/16/solid";
+import { ToastContainer, toast } from "react-toastify";
 import Logo from "@/components/Logo";
+
+import LoadingSpinner from "@/components/LoadingSpinner";
 
 interface IGetTouchContainerProps {
   refer: RefObject<HTMLDivElement>;
@@ -28,9 +30,33 @@ const GetTouchContainer: React.FC<IGetTouchContainerProps> = ({
 }) => {
   const stars = Array.from({ length: 5 });
 
+  const [loading, setLoading] = useState<boolean>(false);
+  const [message, setMessage] = useState<string>("");
+
+  const handleSubmit = () => {
+    const data = {
+      message,
+    };
+    setLoading(true);
+    axios
+      .post("/api/send", data)
+      .then((res) => {
+        if (res.data.success) {
+          toast.success("Successfully Submitted!");
+          setMessage("");
+          setLoading(false);
+        }
+      })
+      .catch((err) => {
+        toast.error("Whops, Error occured!!!");
+        setLoading(false);
+      });
+  };
+
   return (
     <div className="flex flex-col space-y-0 w-full" ref={refer}>
       <Flex className="px-[50px] py-[107px] h-[703px] space-x-0 bg-[#FAF9F6] justify-center">
+        <ToastContainer />
         <Flex className="bg-[#F0E1C9] items-end justify-center relative hidden md:flex">
           <Image
             src={Ellipse}
@@ -108,18 +134,26 @@ const GetTouchContainer: React.FC<IGetTouchContainerProps> = ({
           </Flex>
         </Flex>
 
-        <Flex className=" justify-start items-stretch space-x-[35px] pt-8 pl-0 lg:pl-[200px]">
+        <Flex className=" justify-start items-center space-x-[35px] pt-8 pl-0 lg:pl-[200px]">
           <input
             placeholder="Enter Email"
-            className="pl-[10px] bg-[#FFFFFF00] border-2 border-[#F3AD35] text-white placeholder:text-white w-[300px] rounded-[15px] text-[20px]"
+            onChange={(e) => {
+              setMessage(e.target.value);
+            }}
+            className="px-[10px] py-[5px] bg-[#FFFFFF00] border-2 border-[#F3AD35] text-white placeholder:text-white w-[300px] rounded-[15px] text-[20px] focus:outline-none focus:ring-0"
           />
-          <RButton
-            text="Send"
-            backColor="bg-[#F3AD35]"
-            textColor="text-[#FFFFFF]"
-            borderColor="border-[#FFFFFF00]"
-            icon={<ArrowRightIcon className="w-6 h-6 text-white" />}
-          />
+          <button
+            onClick={handleSubmit}
+            className={` font-poppins bg-lightyellow text-base text-center py-2 w-[140px] ml-[65%] px-[20px] rounded-[25px] border-[1px] border-white text-white flex justify-center items-center`}
+          >
+            {loading ? (
+              <LoadingSpinner>Sending</LoadingSpinner>
+            ) : (
+              <>
+                Submit <ChevronRightIcon className="w-6 h-6"></ChevronRightIcon>
+              </>
+            )}
+          </button>
         </Flex>
         <Flex className="flex-1 items-center space-x-[26px] pt-[30px] pr-[70px] md:pr-[200px] xl:pr-[600px]">
           <Image src={C} alt="c" />

@@ -38,7 +38,7 @@ const WhyUsContainer = () => {
         implementing next-generation IT systems with an emphasis on innovation,
         professionalism, quality and reliability
       </Typography>
-      <Flex className="flex flex-col lg:flex-wrap space-y-[12px] text-white 2xl:h-[200px] max-w-[800px]">
+      <Flex className="flex flex-col pl-[40px] lg:pl-0 lg:flex-wrap space-y-[12px] text-white 2xl:h-[200px] max-w-[800px]">
         <UsReason text="Flexible Engagement Model" />
         <UsReason text="Pursue Best Practices and Proactive Approach" />
         <UsReason text="High Quality Services" />
