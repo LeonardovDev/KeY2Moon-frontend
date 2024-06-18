@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Inter, Prompt, Rancho, Poppins } from "next/font/google";
 import "./globals.css";
 
+import "flowbite";
+import "flowbite/dist/flowbite.min.css";
+
 const prompt = Prompt({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
@@ -39,7 +42,7 @@ export default function RootLayout({
     >
       <body className={poppins.className}>
         {children}
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+        {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script> */}
       </body>
     </html>
   );

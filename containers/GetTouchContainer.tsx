@@ -1,6 +1,6 @@
 import { Flex, Input, Typography } from "antd";
 import Image from "next/image";
-import React, { forwardRef } from "react";
+import React, { RefObject } from "react";
 import Woman from "@/public/Images/GetTouchPage/Woman.svg";
 import Ellipse from "@/public/Images/GetTouchPage/Ellipse.svg";
 import Star from "@/public/Images/GetTouchPage/Star.svg";
@@ -17,11 +17,19 @@ import { ArrowRightIcon } from "@heroicons/react/16/solid";
 import UnderlinedText from "@/components/UnderlinedText";
 import Logo from "@/components/Logo";
 
-const GetTouchContainer = forwardRef<HTMLDivElement>((props, ref) => {
+interface IGetTouchContainerProps {
+  ref: RefObject<HTMLDivElement>;
+  handleTop: (e: React.MouseEvent<HTMLElement>) => void;
+}
+
+const GetTouchContainer: React.FC<IGetTouchContainerProps> = ({
+  ref,
+  handleTop,
+}) => {
   const stars = Array.from({ length: 5 });
 
   return (
-    <Flex className="flex flex-col space-y-0 w-full" ref={ref}>
+    <div className="flex flex-col space-y-0 w-full" ref={ref}>
       <Flex className="px-[50px] py-[107px] h-[703px] space-x-0 bg-[#FAF9F6] justify-center">
         <Flex className="bg-[#F0E1C9] items-end justify-center relative hidden md:flex">
           <Image
@@ -52,7 +60,12 @@ const GetTouchContainer = forwardRef<HTMLDivElement>((props, ref) => {
       </Flex>
       <Flex className="bg-[#092332] flex-col pl-[30px] md:pl-[162px] py-[45px] relative">
         <Flex className="flex-col md:flex-row md:space-x-[80px] space-y-10 items-start relative">
-          <div className=" cursor-pointer" onClick={props.handleTop}>
+          <div
+            className=" cursor-pointer"
+            onClick={(e) => {
+              handleTop(e);
+            }}
+          >
             <Logo className="" />
           </div>
           <Flex className="flex space-y-[50px] items-start justify-start flex-1">
@@ -123,8 +136,8 @@ const GetTouchContainer = forwardRef<HTMLDivElement>((props, ref) => {
           alt="student"
         />
       </Flex>
-    </Flex>
+    </div>
   );
-});
+};
 
 export default GetTouchContainer;
