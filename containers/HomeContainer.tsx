@@ -20,8 +20,8 @@ const HomeContainer = forwardRef<HTMLDivElement>((props, ref) => (
     <div className="w-screen h-screen flex bg-black">
       <div className="flex-1 bg-darkblue h-full relative">
         <Flex className="flex flex-1 bg-[#092332] -z-20">
-          <Flex className="flex flex-col pt-[180px] md:pt-[212px] px-[20px] md:px-[30px] lg:px-[80px] xl:px-[150px] space-y-10 justify-center items-center md:items-start">
-            <h1 className="text-[25px] md:text-[32px] text-white font-semibold leading-9 max-w-[380px]">
+          <Flex className="flex flex-col pt-[180px] md:pt-[212px] px-[20px] md:px-[30px] lg:px-[80px] xl:px-[150px] space-y-14 justify-center items-center md:items-start">
+            <h1 className="text-[25px] md:text-[32px] xl:text-[40px] text-white font-semibold leading-9 max-w-[600px]">
               Creative
               <span className=" relative inline-block pl-[10px]">
                 <p>Web3</p>
@@ -32,12 +32,12 @@ const HomeContainer = forwardRef<HTMLDivElement>((props, ref) => (
                 <Image
                   src={ProjectWrappter}
                   alt="wrapper"
-                  className="absolute top-[-5px] left-[3px] w-full"
+                  className="absolute top-[-8px] left-[3px] w-full"
                 />
                 <span className="relative">Projects</span>
               </p>
             </h1>
-            <Typography className="text-[18px] leading-[22.5px] font-normal text-white max-w-[440px]">
+            <Typography className="text-[18px] md:text-[24px] leading-[35.5px] font-normal text-white max-w-[440px]">
               Hands-on advisory firm helping projects to enter and evolve in the
               web3 industry
             </Typography>
