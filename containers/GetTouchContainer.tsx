@@ -69,8 +69,8 @@ const GetTouchContainer: React.FC<IGetTouchContainerProps> = ({
             <Logo className="" />
           </div>
           <Flex className="flex space-y-[50px] items-start justify-start flex-1">
-            <Flex className=" flex-col md:flex-row space-x-[100px]">
-              <Flex className="flex-row md:flex-col justify-center md:justify-start md:space-y-[8px] space-x-5 md:space-x-0 items-center">
+            <Flex className="flex-col md:flex-row space-x-[100px] items-start">
+              <Flex className="md:flex-col justify-center md:justify-start md:space-y-[8px] space-x-5 md:space-x-0 items-center">
                 <Typography className="pb-[5px] text-[24px] font-medium text-white">
                   About
                 </Typography>
@@ -90,7 +90,7 @@ const GetTouchContainer: React.FC<IGetTouchContainerProps> = ({
                   FAQ
                 </Typography>
               </Flex>
-              <Flex className="flex-row md:flex-col justify-center md:justify-start md:space-y-[8px] space-x-5 md:space-x-0 items-center">
+              <Flex className="md:flex-col justify-center md:justify-start md:space-y-[8px] space-x-5 md:space-x-0 items-center">
                 <Typography className="pb-[5px] text-[24px] font-medium text-white">
                   Support
                 </Typography>
@@ -109,9 +109,9 @@ const GetTouchContainer: React.FC<IGetTouchContainerProps> = ({
         </Flex>
 
         <Flex className=" justify-start items-stretch space-x-[35px] pt-8 pl-0 lg:pl-[200px]">
-          <Input
+          <input
             placeholder="Enter Email"
-            className="bg-[#FFFFFF00] border-2 border-[#F3AD35] text-white placeholder:text-white w-[300px] rounded-[15px] text-[20px]"
+            className="pl-[10px] bg-[#FFFFFF00] border-2 border-[#F3AD35] text-white placeholder:text-white w-[300px] rounded-[15px] text-[20px]"
           />
           <RButton
             text="Send"
