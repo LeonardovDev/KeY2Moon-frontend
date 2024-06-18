@@ -16,9 +16,9 @@ const CourseCard = ({ pic, title, cnt }: ICourseCard) => {
     >
       <Image src={pic} alt="picture1" className="w-[65px] h-fit" />
       <Flex className="flex-col space-y-[10px]">
-        <Typography className="text-[15px] md:text-[20px] font-medium leading-[30px]">
+        <h1 className="text-[15px] md:text-[20px] font-medium leading-[30px]">
           {title}
-        </Typography>
+        </h1>
         <Typography className="text-[15px] md:text-[20px] font-medium leading-[30px] text-[#6E6E6E]">
           {cnt} Courses
         </Typography>

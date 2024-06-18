@@ -17,20 +17,20 @@ const UnderlinedText = ({
   fontColor,
 }: IUTProps) => {
   return (
-    <h1 className="inline-block relative">
-      <p
+    <h2 className="inline-block relative">
+      <span
         className={`text-[${fontSize}] leading-[0px] pr-[5px] font-${fontWeight} font-poppins ${
           fontColor ? fontColor : "text-black"
         }`}
       >
         {text}
-      </p>
+      </span>
       <Image
         src={icon}
         alt="underline"
-        className="absolute bottom-[-10px] w-full h-auto"
+        className="absolute bottom-[-13px] w-full h-auto"
       />
-    </h1>
+    </h2>
   );
 };
 

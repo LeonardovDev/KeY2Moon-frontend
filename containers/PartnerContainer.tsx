@@ -2,6 +2,8 @@ import React from "react";
 import { Typography, Flex } from "antd";
 import Image from "next/image";
 
+import "flowbite/dist/flowbite.min.js";
+
 import Pic1 from "@/public/Images/PartnerPage/Pic1.svg";
 import Pic2 from "@/public/Images/PartnerPage/Pic2.svg";
 import Pic3 from "@/public/Images/PartnerPage/Pic3.svg";
@@ -16,16 +18,22 @@ const PartnerContainer = () => {
       <Typography className="text-[16px] text-[#6E6E6E] font-semibold pt-[55px] font-poppins">
         OUR PARTNERS
       </Typography>
-      <Typography className="text-[20px] font-medium pt-[22px]  font-poppins text-black">
+      <h1 className="text-[20px] font-medium pt-[22px]  font-poppins text-black">
         We Worked with{" "}
-        <UnderlinedText
-          text="Global Largest"
-          icon={GlobalUnderline}
-          fontSize="20px"
-          fontWeight="medium"
-        />{" "}
+        <h2 className="inline-block relative">
+          <span
+            className={`text-[20px] leading-[0px] pr-[5px] font-medium font-poppins ${"text-black"}`}
+          >
+            Global Largest
+          </span>
+          <Image
+            src={GlobalUnderline}
+            alt="underline"
+            className="absolute bottom-[-17px] w-full h-auto"
+          />
+        </h2>
         Brands
-      </Typography>
+      </h1>
       <Typography className="text-[20px] text-[#6E6E6E] font-medium leading-[30px] pt-[45px] text-center font-poppins px-[50px] lg:px-[150px] max-w-[1065px]">
         We start every new client interaction with an in-depth discovery call
         where we get to know each other and recommended best course of action

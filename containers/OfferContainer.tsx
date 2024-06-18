@@ -152,7 +152,7 @@ const OfferContainer = forwardRef<HTMLDivElement>((props, ref) => {
         <Typography className="font-semibold text-[16px] text-[#6E6E6E] font-poppins">
           WE OFFER
         </Typography>
-        <Typography className=" font-medium text-[20px] leading-[30px] text-black pt-[22px] font-poppins">
+        <h1 className=" font-medium text-[20px] leading-[30px] text-black pt-[22px] font-poppins">
           From the{" "}
           <UnderlinedText
             text="KeY2Moon Solutions"
@@ -161,7 +161,7 @@ const OfferContainer = forwardRef<HTMLDivElement>((props, ref) => {
             fontWeight="medium"
           />{" "}
           community
-        </Typography>
+        </h1>
       </Flex>
 
       {offersData.map((data, index) => {

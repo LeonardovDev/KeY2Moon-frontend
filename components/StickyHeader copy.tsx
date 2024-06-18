@@ -1,13 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import Logo from "./Logo";
 import Link from "next/link";
-import {
-  MagnifyingGlassIcon,
-  HeartIcon,
-  ShoppingBagIcon,
-  Bars3Icon,
-} from "@heroicons/react/16/solid";
+import { Bars3Icon } from "@heroicons/react/16/solid";
 
 interface IHeaderProps {
   selectedMenu: number;
@@ -45,6 +39,7 @@ const Header = ({
       setIsVisible(true);
     }
     setLastScrollTop(scroll);
+    console.log(lastScrollTop);
   };
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -53,24 +48,25 @@ const Header = ({
 
   return (
     <div
-      className={`header flex fixed h-[63px] justify-end xl:justify-center  items-center w-full z-[100] transition-all duration-300 ${
+      className={`header flex fixed h-[63px]  justify-end md:justify-around  items-center w-full z-[100] transition-all duration-300  ${
         isVisible
           ? ""
           : "invisible -translate-y-full transition-all duration-150"
       } ${
         lastScrollTop > 100
-          ? "bg-[#12171c] visible"
-          : " bg-trans-dark/[.12] visible"
-      } `}
+          ? "md:bg-[#12171c] bg-mobile-header"
+          : " bg-trans-dark/[.12]"
+      }`}
     >
-      <Logo className="absolute left-[50px] xl:left-[150px] top-[5px] font-normal" />
-      <ul className=" justify-between text-white w-[160px] absolute right-[150px] top-[20px] hidden xl:flex">
-        <MagnifyingGlassIcon className="w-6 h-6 cursor-pointer" />
-        <HeartIcon className="w-6 h-6 cursor-pointer" />
-        <ShoppingBagIcon className="w-6 h-6 cursor-pointer" />
-      </ul>
-      <div className="menu-wrapper hidden xl:block">
-        <ul className=" flex justify-between w-[500px] text-white text-[18px] font-prompt">
+      <div
+        className="title text-mobileTitle font-semibold sm:text-base absolute top-[10px] md:top-[10px]  left-[16px] sm:left-[20px] lg:left-[50px] 2xl:left-[176px] flex items-center gap-x-5 sm:gap-x-3 cursor-pointer"
+        onClick={(e) => handleClick(e, 0)}
+      >
+        {/* <Image src={Logo} alt={"Logo"} priority /> */}
+        KeY2Moon Solutions
+      </div>
+      <div className="menu-wrapper hidden md:block">
+        <ul className=" flex justify-between px-10px text-[14x]/[17px] w-[420px]">
           {headers.map((headerItem, index) => {
             return (
               <li key={index}>
@@ -86,7 +82,7 @@ const Header = ({
           })}
         </ul>
       </div>
-      <div className="mobile-menu-wrapper xl:hidden mr-4 sm:mr-10">
+      <div className="mobile-menu-wrapper md:hidden mr-4 sm:mr-10">
         <button
           id="dropdownBottomButton"
           data-dropdown-toggle="dropdownBottom"
@@ -99,7 +95,7 @@ const Header = ({
 
         <div
           id="dropdownBottom"
-          className="z-10 hidden r-0 bg-darkblue divide-y divide-gray-100 rounded-lg shadow w-44 text-white"
+          className="z-10 hidden r-0 bg-main-back divide-y divide-gray-100 rounded-lg shadow w-44 text-white"
         >
           <ul
             className="py-2 text-sm text-white"

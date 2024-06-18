@@ -22,23 +22,23 @@ const WhyUsContainer = () => {
       <Typography className="text-[18px] text-[#BEBEBE] font-medium font-poppins">
         WHY CHOOSE US
       </Typography>
-      <Typography className="text-[32px] leading-[48px] font-semibold text-white font-poppins ">
-        Don't know how t
+      <h1 className="text-[32px] leading-[48px] font-semibold text-white font-poppins ">
+        Don't know how to{" "}
         <UnderlinedText
-          text="o Start w"
+          text=" Start "
           fontSize="32px"
           fontWeight="semibold"
           icon={StartUnderline}
           fontColor="text-white"
         />
-        ith KeY2Moon Solutions
-      </Typography>
-      <Typography className="text-[16px] leading-[24px] font-semibold text-[#BEBEBE] pb-[55px] font-poppins max-w-[1240px]">
+        with KeY2Moon Solutions
+      </h1>
+      <h1 className="text-[16px] leading-[24px] font-semibold text-[#BEBEBE] pb-[30px] font-poppins max-w-[1240px]">
         KeY2Moon Solutions is a technology company that specializes in
         implementing next-generation IT systems with an emphasis on innovation,
         professionalism, quality and reliability
-      </Typography>
-      <Flex className="flex flex-col pl-[40px] lg:pl-0 lg:flex-wrap space-y-[12px] text-white 2xl:h-[200px] max-w-[800px]">
+      </h1>
+      <Flex className="flex flex-col pl-[40px] lg:pl-0 lg:flex-wrap space-y-[12px] text-white 2xl:h-[230px] max-w-[800px]">
         <UsReason text="Flexible Engagement Model" />
         <UsReason text="Pursue Best Practices and Proactive Approach" />
         <UsReason text="High Quality Services" />

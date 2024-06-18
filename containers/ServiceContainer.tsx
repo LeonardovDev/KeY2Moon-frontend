@@ -70,10 +70,10 @@ const ServiceContainer = forwardRef<HTMLDivElement>((props, ref) => (
         </Flex>
       </Flex>
       <Flex className="flex flex-col space-y-[25px] flex-1 pt-[50px] lg:pt-0 items-center lg:items-start">
-        <Typography className="text-[20px] leading-[30px] font-medium text-[#6E6E6E] font-poppins text-center lg:text-left">
+        <h1 className="text-[20px] leading-[30px] font-medium text-[#6E6E6E] font-poppins text-center lg:text-left">
           WHAT'S OUR MAIN GOAL
-        </Typography>
-        <Typography className="text-[24px] leading-[43px] font-semibold font-poppins text-black max-w-[600px] lg:max-w-[500px] text-center lg:text-left">
+        </h1>
+        <h1 className="text-[24px] leading-[43px] font-semibold font-poppins text-black max-w-[600px] lg:max-w-[500px] text-center lg:text-left">
           Take The Next Step Toward Your Personal And{" "}
           <UnderlinedText
             text="Professional"
@@ -82,8 +82,8 @@ const ServiceContainer = forwardRef<HTMLDivElement>((props, ref) => (
             icon={ProUnderline}
           />{" "}
           Goals With Key2Moon Solutions
-        </Typography>
-        <Typography className="text-[15px] leading-[24px] text-[#6E6E6E] font-poppins text-center lg:text-left max-w-[540px]">
+        </h1>
+        <h2 className="text-[15px] leading-[24px] text-[#6E6E6E] font-poppins text-center lg:text-left max-w-[540px]">
           We're dedicated to delivering innovative IT solutions that empower
           businesses to thrive in the digital age. Zen Class is one of the
           industry’s leading Project Based Career Programs offered by KeY2Moon
@@ -92,7 +92,7 @@ const ServiceContainer = forwardRef<HTMLDivElement>((props, ref) => (
           Founders (Ex-Paypal Employees) also offers mentoring through experts
           from companies like Google, Microsoft, Flipkart, Zoho & Fresh-works
           for placing you in top companies with high salaries.
-        </Typography>
+        </h2>
       </Flex>
     </Flex>
 

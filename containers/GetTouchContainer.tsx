@@ -66,7 +66,7 @@ const GetTouchContainer: React.FC<IGetTouchContainerProps> = ({
           />
           <Image src={Woman} alt="woman" className=" z-10" />
         </Flex>
-        <div className="flex-1 bg-[#092332] pt-[50px] px-[40px] max-w-[690px] min-w-[480px]">
+        <div className="flex-1 bg-[#092332] pt-[30px] px-[40px] max-w-[690px] min-w-[480px]">
           <Typography className="text-white text-[24px] font-semibold leading-[40px] font-prompt">
             What’s our real client stories <br />
             About our work & passion
