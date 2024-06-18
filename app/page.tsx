@@ -68,7 +68,7 @@ export default function Home() {
       <PartnerContainer />
       <WhyUsContainer />
       <OfferContainer ref={blogRef} />
-      <GetTouchContainer ref={contactRef} handleTop={handleTop} />
+      <GetTouchContainer refer={contactRef} handleTop={handleTop} />
     </div>
   );
 }

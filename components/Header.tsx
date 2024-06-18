@@ -27,7 +27,7 @@ interface IHeaderProps {
 const Header = ({ selectedMenu, handleClick }: IHeaderProps) => {
   return (
     <>
-      <div className="hidden xl:flex absolute w-full justify-center items-center z-50 ">
+      <div className="hidden xl:block absolute w-full justify-center items-center z-50 ">
         <div className="relative pt-[53px] w-full flex justify-center">
           <ul
             className={`flex justify-between w-[500px] text-white text-[18px] font-prompt`}

@@ -18,18 +18,18 @@ import UnderlinedText from "@/components/UnderlinedText";
 import Logo from "@/components/Logo";
 
 interface IGetTouchContainerProps {
-  ref: RefObject<HTMLDivElement>;
+  refer: RefObject<HTMLDivElement>;
   handleTop: (e: React.MouseEvent<HTMLElement>) => void;
 }
 
 const GetTouchContainer: React.FC<IGetTouchContainerProps> = ({
-  ref,
+  refer,
   handleTop,
 }) => {
   const stars = Array.from({ length: 5 });
 
   return (
-    <div className="flex flex-col space-y-0 w-full" ref={ref}>
+    <div className="flex flex-col space-y-0 w-full" ref={refer}>
       <Flex className="px-[50px] py-[107px] h-[703px] space-x-0 bg-[#FAF9F6] justify-center">
         <Flex className="bg-[#F0E1C9] items-end justify-center relative hidden md:flex">
           <Image

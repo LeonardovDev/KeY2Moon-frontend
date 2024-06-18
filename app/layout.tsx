@@ -2,9 +2,6 @@ import type { Metadata } from "next";
 import { Inter, Prompt, Rancho, Poppins } from "next/font/google";
 import "./globals.css";
 
-import "flowbite";
-import "flowbite/dist/flowbite.min.css";
-
 const prompt = Prompt({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
