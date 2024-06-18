@@ -1,6 +1,7 @@
 import { Flex, Input, Typography } from "antd";
 import Image from "next/image";
 import React, { RefObject, useState } from "react";
+import "react-toastify/dist/ReactToastify.css";
 
 import axios from "axios";
 
