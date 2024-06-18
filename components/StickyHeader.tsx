@@ -60,7 +60,7 @@ const Header = ({
           : "invisible -translate-y-full transition-all duration-150"
       } ${
         lastScrollTop > 100
-          ? "md:bg-[#12171c] bg-mobile-header visible"
+          ? "bg-[#12171c] visible"
           : " bg-trans-dark/[.12] visible"
       } `}
     >

@@ -28,11 +28,11 @@ const HomeContainer = forwardRef<HTMLDivElement>((props, ref) => (
                 <Image src={HomeUnderlineShort} alt="home underline" />
               </span>{" "}
               Agency for your Next
-              <p className="relative inline-block pl-[10px] md:mt-3">
+              <p className="relative inline-block pt-1 pl-[10px] md:mt-5">
                 <Image
                   src={ProjectWrappter}
                   alt="wrapper"
-                  className="absolute top-[-8px] left-[3px] w-full"
+                  className="absolute top-[-3px] md:top-[-8px] left-[3px] w-full"
                 />
                 <span className="relative">Projects</span>
               </p>
@@ -78,7 +78,7 @@ const HomeContainer = forwardRef<HTMLDivElement>((props, ref) => (
           Raised for Projects
         </p>
       </div>
-      <div className="project-supported  pt-[30px] pb-[60px] w-[160px] sm:w-fit sm:p-0">
+      <div className="project-supported  pt-[60px] pb-[30px] w-[160px] sm:w-fit sm:p-0">
         <h2
           className={`amount text-[40px] md:text-miniTitle xl:text-[64px]/[96px]`}
         >
@@ -88,7 +88,7 @@ const HomeContainer = forwardRef<HTMLDivElement>((props, ref) => (
           Years of Web3 experience
         </p>
       </div>
-      <div className="project-supported  pt-[30px] pb-[60px] w-[160px] sm:w-fit sm:p-0">
+      <div className="project-supported  pt-[60px] pb-[30px] w-[160px] sm:w-fit sm:p-0">
         <h2
           className={`amount text-[40px] md:text-miniTitle xl:text-[64px]/[96px]`}
         >

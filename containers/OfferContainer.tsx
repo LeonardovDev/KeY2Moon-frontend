@@ -146,7 +146,7 @@ const OfferContainer = forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <>
       <Flex
-        className="flex flex-col bg-white justify-center items-center py-[42px] px-[50px]"
+        className="flex flex-col bg-white justify-center items-center pt-[42px] px-[50px]"
         ref={ref}
       >
         <Typography className="font-semibold text-[16px] text-[#6E6E6E] font-poppins">

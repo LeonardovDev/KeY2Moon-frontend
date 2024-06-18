@@ -46,14 +46,15 @@ const WhyUsContainer = () => {
         <UsReason text="On Time and On Budget Deliveryies" />
         <UsReason text="Focus on Continuous Process Improvement" />
       </Flex>
-
-      <RButton
-        text="Explore All"
-        textColor="text-white"
-        backColor="bg-[#FFFFFF00]"
-        borderColor="border-[#FFFFFF]"
-        icon={<ArrowRightIcon className="w-6 h-6 text-white" />}
-      />
+      <div className="px-[30px] pt-[10px]">
+        <RButton
+          text="Explore All"
+          textColor="text-white"
+          backColor="bg-[#FFFFFF00]"
+          borderColor="border-[#FFFFFF]"
+          icon={<ArrowRightIcon className="w-6 h-6 text-white" />}
+        />
+      </div>
       <Image
         src={Group}
         alt="group"
