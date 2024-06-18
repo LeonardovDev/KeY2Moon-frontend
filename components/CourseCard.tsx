@@ -12,7 +12,7 @@ const CourseCard = ({ pic, title, cnt }: ICourseCard) => {
   return (
     <Flex
       className="px-[20px] md:px-[40px] py-[43px] space-x-[26px] items-center bg-white rounded-[15px] border-2 border-[#E6E6E6] 
-                      w-[250px] h-[120px] md:w-[302px] md:h-[156px]"
+                      w-[250px] h-[120px] md:w-[302px] md:h-[156px] cursor-pointer hover:bg-red-700 transition-all duration-700"
     >
       <Image src={pic} alt="picture1" className="w-[65px] h-fit" />
       <Flex className="flex-col space-y-[10px]">

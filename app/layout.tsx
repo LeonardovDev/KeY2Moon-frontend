@@ -37,7 +37,10 @@ export default function RootLayout({
       lang="en"
       className={`${prompt.variable} ${rancho.variable} ${poppins.variable}`}
     >
-      <body className={poppins.className}>{children}</body>
+      <body className={poppins.className}>
+        {children}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+      </body>
     </html>
   );
 }
