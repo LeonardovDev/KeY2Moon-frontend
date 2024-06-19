@@ -8,7 +8,7 @@ import React, { forwardRef } from "react";
 
 import { ArrowRightIcon } from "@heroicons/react/16/solid";
 
-import { Flex, Typography, Button } from "antd";
+import { Flex, Typography } from "antd";
 import RButton from "@/components/RButton";
 
 import HomeUnderlineShort from "@/public/Images/Homepage/HomeUnderlineShort.svg";

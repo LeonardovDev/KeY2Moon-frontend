@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Typography } from "antd";
+import { Flex } from "antd";
 
 import Image from "next/image";
 import Check from "@/public/Images/WhyUsPage/Check.svg";

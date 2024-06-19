@@ -1,8 +1,8 @@
 import React from "react";
-import { Typography, Flex } from "antd";
+import { Typography } from "antd";
 import Image from "next/image";
 
-import "flowbite/dist/flowbite.min.js";
+// import "flowbite/dist/flowbite.min.js";
 
 import Pic1 from "@/public/Images/PartnerPage/Pic1.svg";
 import Pic2 from "@/public/Images/PartnerPage/Pic2.svg";
@@ -10,7 +10,6 @@ import Pic3 from "@/public/Images/PartnerPage/Pic3.svg";
 import Pic4 from "@/public/Images/PartnerPage/Pic4.svg";
 
 import GlobalUnderline from "@/public/Images/PartnerPage/GlobalUnderline.svg";
-import UnderlinedText from "@/components/UnderlinedText";
 
 const PartnerContainer = () => {
   return (
@@ -20,7 +19,7 @@ const PartnerContainer = () => {
       </Typography>
       <h1 className="text-[20px] font-medium pt-[22px]  font-poppins text-black">
         We Worked with{" "}
-        <h2 className="inline-block relative">
+        <p className="inline-block relative">
           <span
             className={`text-[20px] leading-[0px] pr-[5px] font-medium font-poppins ${"text-black"}`}
           >
@@ -31,7 +30,7 @@ const PartnerContainer = () => {
             alt="underline"
             className="absolute bottom-[-17px] w-full h-auto"
           />
-        </h2>
+        </p>
         Brands
       </h1>
       <Typography className="text-[20px] text-[#6E6E6E] font-medium leading-[30px] pt-[45px] text-center font-poppins px-[50px] lg:px-[150px] max-w-[1065px]">

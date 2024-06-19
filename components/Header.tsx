@@ -1,13 +1,8 @@
-"use client";
-
 import {
   MagnifyingGlassIcon,
   HeartIcon,
   ShoppingBagIcon,
-  Bars3Icon,
 } from "@heroicons/react/16/solid";
-
-import { useState, useEffect } from "react";
 
 import Link from "next/link";
 import Logo from "./Logo";
@@ -19,11 +14,11 @@ interface IHeaderProps {
 }
 
 const Header = ({ handleClick }: IHeaderProps) => {
-  const [show, setShow] = useState(false);
-  const handleBtnClicked = () => {
-    console.log("clicked!_button");
-    setShow(!show);
-  };
+  // const [show, setShow] = useState(false);
+  // const handleBtnClicked = () => {
+  //   console.log("clicked!_button");
+  //   setShow(!show);
+  // };
 
   return (
     <div className="hidden xl:block absolute w-full justify-center items-center z-50 transition-all duration-700">

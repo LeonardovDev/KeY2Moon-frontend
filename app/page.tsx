@@ -2,7 +2,6 @@
 
 import React, { useRef, useState, useEffect } from "react";
 
-import Header from "@/components/Header";
 import StickyHeader from "@/components/StickyHeader";
 import GetTouchContainer from "@/containers/GetTouchContainer";
 import HomeContainer from "@/containers/HomeContainer";
@@ -17,7 +16,7 @@ export default function Home() {
   const [visible, setVisible] = useState(true);
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollPos = window.pageYOffset;
+      const currentScrollPos = window.scrollY;
       if (currentScrollPos < 300) {
         setPrevScrollPos(currentScrollPos);
         setVisible(false);
@@ -87,7 +86,6 @@ export default function Home() {
 
   return (
     <div className="overflow-x-hidden">
-      {/* <Header handleClick={handleClick} /> */}
       <StickyHeader
         selectedMenu={selectedMenu}
         handleClick={handleClick}

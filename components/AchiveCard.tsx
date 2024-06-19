@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Flex, Typography } from "antd";
+import { Flex } from "antd";
 
 interface IAchiveCard {
   icon: any;

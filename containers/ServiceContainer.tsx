@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react";
 import Image from "next/image";
 
-import { Flex, Modal, Typography } from "antd";
+import { Flex, Typography } from "antd";
 import SittingMan from "@/public/Images/ServicePage/SittingMan.svg";
 import SittingWoman from "@/public/Images/ServicePage/SittingWoman.svg";
 import Pic1 from "@/public/Images/ServicePage/Pic1.svg";

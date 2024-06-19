@@ -7,9 +7,6 @@ import RButton from "@/components/RButton";
 
 import { ArrowRightIcon } from "@heroicons/react/16/solid";
 
-import DiscountRate from "@/public/Images/WhyUsPage/DiscountRate.svg";
-import PeopleGroup from "@/public/Images/WhyUsPage/PeopleGroup.svg";
-import Girl from "@/public/Images/WhyUsPage/Girl.svg";
 import UnderlinedText from "@/components/UnderlinedText";
 import Group from "@/public/Images/WhyUsPage/Group.svg";
 
