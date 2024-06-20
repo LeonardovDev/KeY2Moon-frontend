@@ -25,17 +25,24 @@ const ServiceContainer = forwardRef<HTMLDivElement>((props, ref) => (
     className="w-full justify-start pt-14 flex-col items-center bg-white"
     ref={ref}
   >
-    <Typography className="font-semibold text-[24px] leading-[20px] text-[#6E6E6E] font-poppins">
+    <Typography className="font-semibold text-[20px] leading-[20px] text-[#6E6E6E] font-poppins">
       OUR SERVICES
     </Typography>
     <Typography className="text-[28px] font-medium leading-[30px] pt-[28px] font-poppins text-black">
       Services We Can{" "}
-      <UnderlinedText
-        text="Help"
-        fontSize="28px"
-        fontWeight="medium"
-        icon={HelpUnderline}
-      />
+      <p className="inline-block relative">
+        <span
+          className={`text-[28px] leading-[0px] pr-[5px] font-medium font-poppins text-black
+          }`}
+        >
+          Help
+        </span>
+        <Image
+          src={HelpUnderline}
+          alt="underline"
+          className="absolute bottom-[-24px] w-full h-auto"
+        />
+      </p>
       You
     </Typography>
     <Flex className="w-full lg:space-x-[46px] flex flex-col lg:flex-row items-center justify-center pt-[0px] md:pt-[57px] pb-[55px] px-[50px]">
@@ -86,7 +93,7 @@ const ServiceContainer = forwardRef<HTMLDivElement>((props, ref) => (
             fontWeight="semibold"
             icon={ProUnderline}
           />{" "}
-          Goals With Key2Moon Solutions
+          Goals With KeY2Moon Solutions
         </h1>
         <h2 className="text-[15px] leading-[24px] text-[#6E6E6E] font-poppins text-center lg:text-left max-w-[540px]">
           We're dedicated to delivering innovative IT solutions that empower
@@ -102,7 +109,7 @@ const ServiceContainer = forwardRef<HTMLDivElement>((props, ref) => (
     </Flex>
 
     <div className="w-full bg-[#FAF9F6] flex justify-center px-6">
-      <div className="w-auto px-[50px] py-[30px] md:py-[80px] grid grid-cols-2 lg:grid-cols-3 grid-rows-3 lg:grid-rows-2 items-center place-items-center gap-x-28 gap-y-4 md:gap-y-10">
+      <div className="w-auto px-[50px] py-[30px] md:py-[80px] grid grid-cols-2 lg:grid-cols-3 grid-rows-3 lg:grid-rows-2 items-center place-items-center gap-x-12 gap-y-4 md:gap-y-10">
         <CourseCard pic={Pic1} title="Branding" cnt={1} />
         <CourseCard pic={Pic2} title="UI UX Design" cnt={2} />
         <CourseCard pic={Pic3} title="Consulting Programs" cnt={4} />

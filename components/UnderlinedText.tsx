@@ -28,7 +28,7 @@ const UnderlinedText = ({
       <Image
         src={icon}
         alt="underline"
-        className="absolute bottom-[-13px] w-full h-auto"
+        className="absolute bottom-[-10%] w-full h-auto"
       />
     </p>
   );

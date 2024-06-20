@@ -14,7 +14,7 @@ import UsReason from "@/components/UsReason";
 
 const WhyUsContainer = () => {
   return (
-    <Flex className="pl-[40px] lg:pl-[200px] pr-[100px] py-[50px] md:py-[125px] bg-[#092332] flex-col space-y-[25px] relative">
+    <Flex className="pl-[80px] lg:pl-[200px] pr-[100px] py-[50px] md:py-[125px] bg-[#092332] flex-col space-y-[25px] relative">
       <Typography className="text-[18px] text-[#BEBEBE] font-medium font-poppins">
         WHY CHOOSE US
       </Typography>
@@ -26,15 +26,16 @@ const WhyUsContainer = () => {
           fontWeight="semibold"
           icon={StartUnderline}
           fontColor="text-white"
-        />
-        with KeY2Moon Solutions
+        />{" "}
+        with
+        <br className=" hidden lg:block" /> KeY2Moon Solutions
       </h1>
       <h1 className="text-[16px] leading-[24px] font-semibold text-[#BEBEBE] pb-[30px] font-poppins max-w-[1240px]">
         KeY2Moon Solutions is a technology company that specializes in
         implementing next-generation IT systems with an emphasis on innovation,
         professionalism, quality and reliability
       </h1>
-      <Flex className="flex flex-col pl-[40px] lg:pl-0 lg:flex-wrap space-y-[12px] text-white 2xl:h-[230px] max-w-[800px]">
+      <Flex className="flex flex-col pl-0 lg:flex-wrap text-white 2xl:h-[190px] max-w-[800px] justify-start items-start">
         <UsReason text="Flexible Engagement Model" />
         <UsReason text="Pursue Best Practices and Proactive Approach" />
         <UsReason text="High Quality Services" />

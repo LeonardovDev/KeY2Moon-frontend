@@ -97,7 +97,7 @@ const Header = ({
                   onClick={(e) => handleClick(e, index)}
                   className="text-headerSize font-medium"
                 >
-                  <span>{headerItem}</span>``
+                  <span>{headerItem}</span>
                 </Link>
               </li>
             );

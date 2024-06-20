@@ -36,7 +36,7 @@ const HomeContainer = forwardRef<HTMLDivElement>((props, ref) => (
                 <Image
                   src={ProjectWrappter}
                   alt="wrapper"
-                  className="absolute top-[-3px] md:top-[-1px] left-[3px] w-full"
+                  className="absolute top-[-3px] md:top-[-5px] left-[3px] w-full"
                 />
                 <span className="relative">Projects</span>
               </p>
