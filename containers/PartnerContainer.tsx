@@ -38,7 +38,7 @@ const PartnerContainer = () => {
         where we get to know each other and recommended best course of action
       </Typography>
       <div className="py-[55px] w-full space-x-[35px] justify-center items-center grid grid-rows-2 lg:grid-rows-1 grid-cols-2 lg:grid-cols-4 gap-10 place-items-center">
-        <Image src={Pic1} alt="pic1" className="" />
+        <img src="Images/PartnerPage/Pic1.png" alt="pic1" className="" />
         <Image src={Pic2} alt="pic2" className="" />
         <Image src={Pic3} alt="pic3" className="" />
         <Image src={Pic4} alt="pic4" className="" />

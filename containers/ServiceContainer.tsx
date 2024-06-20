@@ -2,8 +2,6 @@ import React, { forwardRef } from "react";
 import Image from "next/image";
 
 import { Flex, Typography } from "antd";
-import SittingMan from "@/public/Images/ServicePage/SittingMan.svg";
-import SittingWoman from "@/public/Images/ServicePage/SittingWoman.svg";
 import Pic1 from "@/public/Images/ServicePage/Pic1.svg";
 import Pic2 from "@/public/Images/ServicePage/Pic2.svg";
 import Pic3 from "@/public/Images/ServicePage/Pic3.svg";
@@ -19,7 +17,6 @@ import Medal from "@/public/Images/ServicePage/Medal.svg";
 import UnderlinedText from "@/components/UnderlinedText";
 import HelpUnderline from "@/public/Images/ServicePage/HelpUnderline.svg";
 import ProUnderline from "@/public/Images/ServicePage/ProUnderline.svg";
-import PeopleGroup from "@/public/Images/ServicePage/PeopleGroup.svg";
 import CourseCard from "@/components/CourseCard";
 import AchiveCard from "@/components/AchiveCard";
 
@@ -52,12 +49,20 @@ const ServiceContainer = forwardRef<HTMLDivElement>((props, ref) => (
               Experiences
             </Typography>
           </Flex>
-          <Image src={SittingMan} alt="sitting man" className="w-fit" />
+          <img
+            src="Images/ServicePage/SittingMan.png"
+            alt="sitting man"
+            className="w-fit py-2"
+          />
         </Flex>
         <Flex className="flex flex-col items-center">
-          <Image src={SittingWoman} alt="sitting man" className="w-fit" />
+          <img
+            src="Images/ServicePage/SittingWoman.png"
+            alt="sitting man"
+            className="w-fit py-2"
+          />
           <Flex className="flex justify-center items-center rounded-[22px] px-[20px] py-[48px] w-fit space-x-[10px] border-[1px] border-[#EAEAEA]">
-            <Image src={PeopleGroup} alt="people group" />
+            <img src="/Images/ServicePage/PeopleGroup.png" alt="people group" />
             <Flex className="flex flex-col items-center">
               <Typography className="text-[22px] font-semibold font-poppins">
                 35K+

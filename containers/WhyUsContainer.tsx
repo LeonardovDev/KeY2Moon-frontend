@@ -8,7 +8,6 @@ import RButton from "@/components/RButton";
 import { ArrowRightIcon } from "@heroicons/react/16/solid";
 
 import UnderlinedText from "@/components/UnderlinedText";
-import Group from "@/public/Images/WhyUsPage/Group.svg";
 
 import StartUnderline from "@/public/Images/WhyUsPage/StartUnderline.svg";
 import UsReason from "@/components/UsReason";
@@ -52,8 +51,8 @@ const WhyUsContainer = () => {
           icon={<ArrowRightIcon className="w-6 h-6 text-white" />}
         />
       </div>
-      <Image
-        src={Group}
+      <img
+        src="/Images/WhyUsPage/Group.png"
         alt="group"
         className="w-[30%] h-auto absolute bottom-[100px] right-[150px] min-w-[350px] hidden lg:block"
       />

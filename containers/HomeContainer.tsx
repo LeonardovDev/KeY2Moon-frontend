@@ -11,9 +11,7 @@ import { ArrowRightIcon } from "@heroicons/react/16/solid";
 import { Flex, Typography } from "antd";
 import RButton from "@/components/RButton";
 
-import HomeUnderlineShort from "@/public/Images/Homepage/HomeUnderlineShort.svg";
 import ProjectWrappter from "@/public/Images/Homepage/ProjectWrapper.svg";
-import HomeGirl from "@/public/Images/Homepage/HomeGirl.svg";
 
 const HomeContainer = forwardRef<HTMLDivElement>((props, ref) => (
   <div ref={ref}>
@@ -25,7 +23,6 @@ const HomeContainer = forwardRef<HTMLDivElement>((props, ref) => (
               Creative
               <span className=" relative inline-block pl-[10px]">
                 <p>Web3</p>
-                <Image src={HomeUnderlineShort} alt="home underline" />
               </span>{" "}
               Agency for your Next
               <p className="relative inline-block pt-1 pl-[10px] md:mt-5">
@@ -52,7 +49,11 @@ const HomeContainer = forwardRef<HTMLDivElement>((props, ref) => (
         </Flex>
       </div>
       <div className="flex flex-1 bg-gradient-to-r from-[#EB9A27] to-[#FBC042] h-full relative justify-center items-start pt-[200px] md:pt-0 md:items-center">
-        <Image src={HomeGirl} className="h-fit min-w-[250px]" alt="home-girl" />
+        <img
+          src="/Images/Homepage/HomeGirl.png"
+          className="h-fit min-w-[250px]"
+          alt="home-girl"
+        />
       </div>
       <ToolKit />
     </div>

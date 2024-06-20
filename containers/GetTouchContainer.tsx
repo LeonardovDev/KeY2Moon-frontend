@@ -5,14 +5,12 @@ import "react-toastify/dist/ReactToastify.css";
 
 import axios from "axios";
 
-import Woman from "@/public/Images/GetTouchPage/Woman.svg";
 import Ellipse from "@/public/Images/GetTouchPage/Ellipse.svg";
 import Star from "@/public/Images/GetTouchPage/Star.svg";
 import C from "@/public/Images/GetTouchPage/C.svg";
 import Camera from "@/public/Images/GetTouchPage/Camera.svg";
 import Facebook from "@/public/Images/GetTouchPage/Facebook.svg";
 import Twitter from "@/public/Images/GetTouchPage/Twitter.svg";
-import Student from "@/public/Images/GetTouchPage/Student.svg";
 
 import { ChevronRightIcon } from "@heroicons/react/16/solid";
 import { ToastContainer, toast } from "react-toastify";
@@ -64,7 +62,11 @@ const GetTouchContainer: React.FC<IGetTouchContainerProps> = ({
             alt="ellipse"
             className=" absolute left-[-122px] top-[-116px] z-0"
           />
-          <Image src={Woman} alt="woman" className=" z-10" />
+          <img
+            src="/Images/GetTouchPage/Woman.png"
+            alt="woman"
+            className=" z-10"
+          />
         </Flex>
         <div className="flex-1 bg-[#092332] pt-[30px] px-[40px] max-w-[690px] min-w-[480px]">
           <Typography className="text-white text-[24px] font-semibold leading-[40px] font-prompt">
@@ -165,8 +167,8 @@ const GetTouchContainer: React.FC<IGetTouchContainerProps> = ({
           <Image src={Facebook} alt="c" className=" cursor-pointer" />
           <Image src={Twitter} alt="c" className=" cursor-pointer" />
         </Flex>
-        <Image
-          src={Student}
+        <img
+          src="/Images/GetTouchPage/Student.png"
           className="absolute bottom-0 right-[100px] overflow-hidden hidden xl:block"
           alt="student"
         />

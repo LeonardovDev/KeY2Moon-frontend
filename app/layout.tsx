@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${prompt.variable} ${rancho.variable} ${poppins.variable}`}
+      className={`${prompt.variable} ${rancho.variable} ${poppins.variable}  scrollbar-hide`}
     >
       <body className={poppins.className}>
         {children}
