@@ -26,6 +26,7 @@ const Header = ({
   setSelectedMenu,
 }: IHeaderProps) => {
   const [isVisible, setIsVisible] = useState(true);
+  const [isUp, setIsUp] = useState(false);
   const [lastScrollTop, setLastScrollTop] = useState(0);
 
   const handleScroll = () => {
@@ -40,9 +41,11 @@ const Header = ({
       }
     });
     if (scroll > lastScrollTop && isVisible) {
+      setIsUp(false);
       setIsVisible(false);
     }
     if (scroll < lastScrollTop) {
+      setIsUp(true);
       setIsVisible(true);
     }
     setLastScrollTop(scroll);
@@ -59,7 +62,7 @@ const Header = ({
           ? ""
           : "invisible -translate-y-full transition-all duration-150"
       } ${
-        lastScrollTop > 100
+        lastScrollTop > 100 && isUp
           ? "bg-[#12171c] visible"
           : " bg-trans-dark/[.12] visible"
       } `}
