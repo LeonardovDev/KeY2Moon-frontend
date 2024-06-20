@@ -1,10 +1,18 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
+
 import Logo from "./Logo";
 import Link from "next/link";
 import { MagnifyingGlassIcon, Bars3Icon } from "@heroicons/react/16/solid";
-import { HeartIcon, ShoppingBagIcon } from "@heroicons/react/24/outline";
+import {
+  HeartIcon,
+  ShoppingBagIcon,
+  ChevronDownIcon,
+} from "@heroicons/react/24/outline";
+
+import ArrowDown from "@/public/Images/Homepage/ArrowDown.svg";
 
 interface IHeaderProps {
   selectedMenu: number;
@@ -79,7 +87,7 @@ const Header = ({
         <HeartIcon className="w-6 h-6 cursor-pointer" />
         <ShoppingBagIcon className="w-6 h-6 cursor-pointer" />
       </ul>
-      <div className="menu-wrapper hidden xl:block">
+      <div className="menu-wrapper hidden xl:block relative">
         <ul className=" flex justify-between w-[500px] text-white text-[18px] font-prompt">
           {headers.map((headerItem, index) => {
             return (
@@ -95,6 +103,11 @@ const Header = ({
             );
           })}
         </ul>
+        <Image
+          src={ArrowDown}
+          alt="down"
+          className="absolute top-[2px] right-[-28px]"
+        />
       </div>
       <div className="mobile-menu-wrapper xl:hidden mr-4 sm:mr-10">
         <button
