@@ -1,6 +1,5 @@
 import React from "react";
 
-import DropShadow from "../DropShadow";
 import "@/app/assets/css/Item.css";
 interface IPartnerItemProps {
   children: React.ReactNode;
