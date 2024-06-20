@@ -3,12 +3,8 @@
 import React, { useEffect, useState } from "react";
 import Logo from "./Logo";
 import Link from "next/link";
-import {
-  MagnifyingGlassIcon,
-  HeartIcon,
-  ShoppingBagIcon,
-  Bars3Icon,
-} from "@heroicons/react/16/solid";
+import { MagnifyingGlassIcon, Bars3Icon } from "@heroicons/react/16/solid";
+import { HeartIcon, ShoppingBagIcon } from "@heroicons/react/24/outline";
 
 interface IHeaderProps {
   selectedMenu: number;
@@ -57,18 +53,28 @@ const Header = ({
 
   return (
     <div
-      className={`header flex fixed h-[63px] justify-end xl:justify-center  items-center w-full z-[100] transition-all duration-300 ${
+      className={`header flex fixed h-[70px] justify-end xl:justify-center  items-center w-full z-[100] transition-all duration-300 ${
         isVisible
           ? ""
-          : "invisible -translate-y-full transition-all duration-150"
+          : "invisible -translate-y-[100px] transition-all duration-150"
       } ${
         lastScrollTop > 100 && isUp
-          ? "bg-[#12171c] visible"
-          : " bg-trans-dark/[.12] visible"
+          ? "bg-[#12171c] visible pt-0"
+          : " bg-trans-dark/[.12] visible pt-[53px]"
       } `}
     >
-      <Logo className="absolute left-[50px] xl:left-[150px] top-[5px] font-normal" />
-      <ul className=" justify-between text-white w-[160px] absolute right-[150px] top-[20px] hidden xl:flex">
+      <Logo
+        className={`absolute left-[50px] xl:left-[150px] font-normal  transition-all duration-300 ${
+          lastScrollTop > 100 && isUp
+            ? "bg-[#12171c] visible  top-[5px]"
+            : " bg-trans-dark/[.12] visible  top-[35px]"
+        }`}
+      />
+      <ul
+        className={`justify-between text-white w-[160px] absolute right-[150px] top-[23px] hidden xl:flex transition-all duration-300 ${
+          lastScrollTop > 100 && isUp ? "pt-0" : "  pt-[20px]"
+        }`}
+      >
         <MagnifyingGlassIcon className="w-6 h-6 cursor-pointer" />
         <HeartIcon className="w-6 h-6 cursor-pointer" />
         <ShoppingBagIcon className="w-6 h-6 cursor-pointer" />
