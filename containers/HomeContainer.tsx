@@ -12,24 +12,31 @@ import { Flex, Typography } from "antd";
 import RButton from "@/components/RButton";
 
 import ProjectWrappter from "@/public/Images/Homepage/ProjectWrapper.svg";
+import WebUnderline from "@/public/Images/Homepage/WebUnderline.svg";
 
 const HomeContainer = forwardRef<HTMLDivElement>((props, ref) => (
   <div ref={ref}>
     <div className="w-screen h-screen flex bg-black">
       <div className="flex-1 bg-darkblue h-full relative">
         <Flex className="flex flex-1 bg-[#092332] -z-20">
-          <Flex className="flex flex-col pt-[180px] md:pt-[212px] px-[20px] md:px-[30px] lg:px-[80px] xl:px-[150px] space-y-14 justify-center items-center md:items-start">
-            <h1 className="text-[25px] md:text-[32px] xl:text-[40px] text-white font-semibold leading-9 max-w-[600px]">
-              Creative
-              <span className=" relative inline-block pl-[10px]">
-                <p>Web3</p>
-              </span>{" "}
-              Agency for your Next
+          <Flex className="flex flex-col pt-[180px] md:pt-[212px] px-[20px] md:px-[30px] lg:px-[80px] xl:px-[100px] 2xl:px-[150px] space-y-14 justify-center items-center md:items-start">
+            <h1 className="text-[25px] md:text-[32px] xl:text-[40px] text-white font-semibold leading-10 max-w-[600px]">
+              Creative{" "}
+              <p className=" inline-block relative">
+                Web3
+                <Image
+                  src={WebUnderline}
+                  alt="underline"
+                  className="w-full absolute bottom-[-24px] hidden md:block"
+                />
+              </p>{" "}
+              Agency
+              <br /> for your Next
               <p className="relative inline-block pt-1 pl-[10px] md:mt-5">
                 <Image
                   src={ProjectWrappter}
                   alt="wrapper"
-                  className="absolute top-[-3px] md:top-[-8px] left-[3px] w-full"
+                  className="absolute top-[-3px] md:top-[-1px] left-[3px] w-full"
                 />
                 <span className="relative">Projects</span>
               </p>

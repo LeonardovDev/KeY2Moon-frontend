@@ -8,7 +8,7 @@ import UserGroupIcon from "./Icons/UserGroupIcon";
 
 const ToolKit = () => {
   return (
-    <div className="toolbox-wrapper absolute top-[277px] px-3 py-6  rounded-[6.39px]  bg-[#78797B33]/[0.2]  md:blocked hiddend">
+    <div className="toolbox-wrapper absolute top-[277px] px-3 py-6  rounded-[6.39px]  bg-[#78797B33]/[0.2]  hidden xl:block">
       <div className="flex flex-col gap-y-[24px]">
         <CloudIcon></CloudIcon>
         <BagIcon></BagIcon>
