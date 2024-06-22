@@ -30,7 +30,7 @@ const WhyUsContainer = () => {
         with
         <br className=" hidden lg:block" /> KeY2Moon Solutions
       </h1>
-      <h1 className="text-[16px] leading-[24px] font-semibold text-[#BEBEBE] pb-[30px] font-poppins max-w-[1240px]">
+      <h1 className="text-[16px] leading-[24px] font-semibold text-[#BEBEBE] pb-[30px] font-poppins max-w-[1100px]">
         KeY2Moon Solutions is a technology company that specializes in
         implementing next-generation IT systems with an emphasis on innovation,
         professionalism, quality and reliability
@@ -40,7 +40,7 @@ const WhyUsContainer = () => {
         <UsReason text="Pursue Best Practices and Proactive Approach" />
         <UsReason text="High Quality Services" />
         <UsReason text="Extensive Offshore IT Services" />
-        <UsReason text="On Time and On Budget Deliveryies" />
+        <UsReason text="On Time and On Budget Deliveries" />
         <UsReason text="Focus on Continuous Process Improvement" />
       </Flex>
       <div className="px-[30px] pt-[10px]">
@@ -55,7 +55,7 @@ const WhyUsContainer = () => {
       <img
         src="/Images/WhyUsPage/Group.png"
         alt="group"
-        className="w-[30%] h-auto absolute bottom-[100px] right-[150px] min-w-[350px] hidden lg:block"
+        className="w-[27%] h-auto absolute bottom-[100px] right-[150px] min-w-[350px] hidden lg:block"
       />
     </Flex>
   );

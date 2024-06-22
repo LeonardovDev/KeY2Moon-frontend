@@ -35,7 +35,7 @@ const SubmitContainer: React.FC<ISubmitContainerProps> = ({ ref }) => {
         </p>{" "}
         your project
       </h1>
-      <div className="flex space-x-5 flex-col md:flex-row items-center md:items-start space-y-10 md:space-y-0">
+      <div className="flex space-x-10 xl:space-x-[300px] flex-col md:flex-row items-center md:items-start space-y-10 md:space-y-0">
         <div className="flex flex-col justify-center items-center md:items-start space-y-4 md:space-y-[60px] flex-1 pt-0 md:pt-[50px]">
           <h1 className=" text-[32px] font-medium">
             Get{" "}

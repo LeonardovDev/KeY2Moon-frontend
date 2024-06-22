@@ -20,7 +20,7 @@ const RButton: React.FC<Props> = ({
       className={`${backColor} flex justify-center items-center space-x-[33px] px-[21px] py-[12px] rounded-[25px] w-fit ${borderColor} border-[1px] cursor-pointer`}
     >
       <Typography
-        className={`${textColor} text-[16px] font-bold leading-[25px]`}
+        className={`${textColor} text-[16px] font-semibold leading-[25px]`}
       >
         {text}
       </Typography>

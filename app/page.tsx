@@ -8,6 +8,7 @@ import HomeContainer from "@/containers/HomeContainer";
 import OfferContainer from "@/containers/OfferContainer";
 import PartnerContainer from "@/containers/PartnerContainer";
 import ServiceContainer from "@/containers/ServiceContainer";
+import TeamContainer from "@/containers/TeamContainer";
 import WhyUsContainer from "@/containers/WhyUsContainer";
 import SubmitContainer from "@/containers/SubmitContainer";
 
@@ -97,6 +98,7 @@ export default function Home() {
       <ServiceContainer ref={aboutRef} />
       <PartnerContainer />
       <WhyUsContainer />
+      <TeamContainer />
       <OfferContainer ref={blogRef} />
       <SubmitContainer ref={contactRef} />
       <GetTouchContainer handleTop={handleTop} />

@@ -37,7 +37,7 @@ const PartnerContainer = () => {
         We start every new client interaction with an in-depth discovery call
         where we get to know each other and recommended best course of action
       </Typography>
-      <div className="py-[55px] w-full space-x-[35px] justify-center items-center grid grid-rows-2 lg:grid-rows-1 grid-cols-2 lg:grid-cols-4 gap-10 place-items-center">
+      <div className="py-[55px] space-x-[35px] justify-center items-center grid grid-rows-2 lg:grid-rows-1 grid-cols-2 lg:grid-cols-4 gap-0 place-items-center">
         <img src="Images/PartnerPage/Pic1.png" alt="pic1" className="" />
         <Image src={Pic2} alt="pic2" className="" />
         <Image src={Pic3} alt="pic3" className="" />

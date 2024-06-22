@@ -159,10 +159,10 @@ const GetTouchContainer: React.FC<IGetTouchContainerProps> = ({
             )}
           </button>
         </Flex>
-        <Flex className="flex-1 items-center space-x-[26px] pt-[30px] pr-[70px] md:pr-[200px] xl:pr-[600px]">
-          <Image src={C} alt="c" />
+        <Flex className="flex-1 items-center space-x-[20px] pt-[30px] pr-[70px] md:pr-[200px] xl:pr-[600px]">
+          <Image src={C} alt="c" className="mt-[3px]" />
           <Typography className="flex-1 text-white text-[20px]">
-            2024, E-Platform
+            2024 KeY2Moon Solutions. All Rights reserved
           </Typography>
           <Image src={Camera} alt="c" className=" cursor-pointer" />
           <Image src={Facebook} alt="c" className=" cursor-pointer" />
