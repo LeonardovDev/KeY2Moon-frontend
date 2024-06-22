@@ -1,6 +1,10 @@
 import React, { forwardRef } from "react";
 import { Flex, Typography } from "antd";
+import Image from "next/image";
 import UnderlinedText from "@/components/UnderlinedText";
+
+import OfferItem from "../components/Items/OfferItem";
+import ProgressWrapper from "../components/ProgressWrapper";
 
 import SolutionUnderline from "@/public/Images/OfferPage/SolutionUnderline.svg";
 import CardPic1 from "@/public/Images/OfferPage/CardPic1.svg";
@@ -9,7 +13,8 @@ import CardPic3 from "@/public/Images/OfferPage/CardPic3.svg";
 import CardPic4 from "@/public/Images/OfferPage/CardPic4.svg";
 import CardPic5 from "@/public/Images/OfferPage/CardPic5.svg";
 import CardPic6 from "@/public/Images/OfferPage/CardPic6.svg";
-import OfferCategory from "@/components/OfferCategory";
+
+import "@/app/assets/css/Item.css";
 
 const OfferContainer = forwardRef<HTMLDivElement>((props, ref) => {
   const offersData = [
@@ -146,7 +151,7 @@ const OfferContainer = forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <>
       <Flex
-        className="flex flex-col bg-white justify-center items-center pt-[42px] px-[50px]"
+        className="flex flex-col bg-white justify-center items-center pt-[42px] px-[50px] pb-[42px]"
         ref={ref}
       >
         <Typography className="font-semibold text-[16px] text-[#6E6E6E] font-poppins">
@@ -154,26 +159,44 @@ const OfferContainer = forwardRef<HTMLDivElement>((props, ref) => {
         </Typography>
         <h1 className=" font-medium text-[20px] leading-[30px] text-black pt-[22px] font-poppins">
           From the{" "}
-          <UnderlinedText
-            text="KeY2Moon Solutions"
-            icon={SolutionUnderline}
-            fontSize="20px"
-            fontWeight="medium"
-          />{" "}
+          <p className="inline-block relative">
+            <span className="text-[20px] leading-[0px] pr-[5px] font-medium font-poppins text-black">
+              KeY2Moon Solutions
+            </span>
+            <Image
+              src={SolutionUnderline}
+              alt="underline"
+              className="absolute bottom-[-15px] w-full h-auto"
+            />
+          </p>{" "}
           community
         </h1>
       </Flex>
-
-      {offersData.map((data, index) => {
-        return (
-          <OfferCategory
-            key={index}
-            bg={data.bg}
-            offerName={data.offerName}
-            offers={data.offers}
-          />
-        );
-      })}
+      <div className="offers-content flex flex-col items-center bg-[#FAF9F6] py-[22px]">
+        {offersData.map((data, index) => {
+          return (
+            <ProgressWrapper
+              count={index + 1}
+              color="purple"
+              title={data.offerName}
+              key={index}
+            >
+              {data.offers.map((offer, ind) => {
+                return (
+                  <OfferItem
+                    color="purple"
+                    icon={`${ind + 1}`}
+                    title={offer.title}
+                    key={ind}
+                  >
+                    {offer.description}
+                  </OfferItem>
+                );
+              })}
+            </ProgressWrapper>
+          );
+        })}
+      </div>
     </>
   );
 });

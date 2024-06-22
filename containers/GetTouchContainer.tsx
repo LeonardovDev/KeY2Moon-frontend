@@ -19,12 +19,10 @@ import Logo from "@/components/Logo";
 import LoadingSpinner from "@/components/LoadingSpinner";
 
 interface IGetTouchContainerProps {
-  refer: RefObject<HTMLDivElement>;
   handleTop: (e: React.MouseEvent<HTMLElement>) => void;
 }
 
 const GetTouchContainer: React.FC<IGetTouchContainerProps> = ({
-  refer,
   handleTop,
 }) => {
   const stars = Array.from({ length: 5 });
@@ -53,14 +51,14 @@ const GetTouchContainer: React.FC<IGetTouchContainerProps> = ({
   };
 
   return (
-    <div className="flex flex-col space-y-0 w-full" ref={refer}>
+    <div className="flex flex-col space-y-0 w-full">
       <Flex className="px-[50px] py-[107px] h-[703px] space-x-0 bg-[#FAF9F6] justify-center">
         <ToastContainer />
         <Flex className="bg-[#F0E1C9] items-end justify-center relative hidden md:flex">
           <Image
             src={Ellipse}
             alt="ellipse"
-            className=" absolute left-[-122px] top-[-116px] z-0"
+            className=" absolute left-[-122px] top-[-100px] z-0"
           />
           <img
             src="/Images/GetTouchPage/Woman.png"
@@ -88,7 +86,7 @@ const GetTouchContainer: React.FC<IGetTouchContainerProps> = ({
         </div>
       </Flex>
       <Flex className="bg-[#092332] flex-col pl-[30px] md:pl-[162px] py-[45px] relative">
-        <Flex className="flex-col md:flex-row md:space-x-[80px] space-y-10 items-start relative">
+        <Flex className="flex-col md:flex-row md:space-x-[80px] space-y-10 md:space-y-0 items-start relative">
           <div
             className=" cursor-pointer"
             onClick={(e) => {
@@ -99,7 +97,7 @@ const GetTouchContainer: React.FC<IGetTouchContainerProps> = ({
           </div>
           <Flex className="flex space-y-[50px] items-start justify-start flex-1">
             <Flex className="flex-col md:flex-row space-x-[100px] items-start">
-              <Flex className="md:flex-col justify-center md:justify-start md:space-y-[8px] space-x-5 md:space-x-0 items-center">
+              <Flex className="md:flex-col justify-center md:justify-start md:space-y-[8px] space-x-5 md:space-x-0 items-center md:items-start">
                 <Typography className="pb-[5px] text-[24px] font-medium text-white">
                   About
                 </Typography>
@@ -119,7 +117,7 @@ const GetTouchContainer: React.FC<IGetTouchContainerProps> = ({
                   FAQ
                 </Typography>
               </Flex>
-              <Flex className="md:flex-col justify-center md:justify-start md:space-y-[8px] space-x-5 md:space-x-0 items-center">
+              <Flex className="md:flex-col justify-center md:justify-start md:space-y-[8px] space-x-5 md:space-x-0 items-center md:items-start">
                 <Typography className="pb-[5px] text-[24px] font-medium text-white">
                   Support
                 </Typography>
@@ -143,17 +141,20 @@ const GetTouchContainer: React.FC<IGetTouchContainerProps> = ({
             onChange={(e) => {
               setMessage(e.target.value);
             }}
-            className="px-[10px] py-[5px] bg-[#FFFFFF00] border-2 border-[#F3AD35] text-white placeholder:text-white w-[300px] rounded-[15px] text-[20px] focus:outline-none focus:ring-0"
+            className="px-[18px] py-[5px] bg-[#FFFFFF00] border-2 border-[#F3AD35] text-white placeholder:text-white w-[300px] rounded-[15px] text-[17px] font-normal
+             focus:outline-none focus:ring-0"
           />
           <button
             onClick={handleSubmit}
-            className={` font-poppins bg-lightyellow text-base text-center py-2 w-[140px] ml-[65%] px-[20px] rounded-[25px] border-[1px] border-white text-white flex justify-center items-center`}
+            className={` font-poppins bg-lightyellow text-base text-center py-2 w-[140px] laeding-6 ml-[65%] px-[20px] rounded-[25px]
+              border-[1px] border-white text-white flex justify-center items-center`}
           >
             {loading ? (
               <LoadingSpinner>Sending</LoadingSpinner>
             ) : (
               <>
-                Submit <ChevronRightIcon className="w-6 h-6"></ChevronRightIcon>
+                Send{" "}
+                <ChevronRightIcon className="w-6 h-6 ml-5"></ChevronRightIcon>
               </>
             )}
           </button>

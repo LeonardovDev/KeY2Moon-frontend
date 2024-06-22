@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'satashi';
+  src: uurl('https://fonts.cdnfonts.com/css/satoshi');
+}
+
+
+.service-item .bullet {
+  color: #0029FF;
+}
+
+.partner-item {
+  background: radial-gradient(50% 50% at 50% 50%, #2D0C26 0%, #5E1643 100%);
+  border: 1px solid #F33592;
+  border-radius: 25px;
+  padding: 12px;
+  font-weight: normal;
+}
+
+.partner-item .bullet {
+  text-shadow: 0px 0px 8px 0px #FFFFFF;
+}
+
+.blog-item {
+  background: #000211;
+  box-shadow: 0px 0px 18.42px 0px #45F336;
+  box-shadow: 0px 0px 36.83px 0px #45F336;
+  border: 0.74px solid #45F336;
+  font-family: 'satoshi';
+}
+
+
+@layer utilities {
+
+  .offer-active.purple {
+    border: 1px solid #F9BA3E;
+    box-shadow: 0px 0px 10px 0px #F9BA3E;
+    box-shadow: 0px 0px 5px 0px #F9BA3E;
+  }
+
+  .offer-active.purple .offer-item-icon {
+    border: 1px solid #F9BA3E;
+    background: white;
+  }
+
+  .progress-wrapper.purple .progress-number {
+    background: white;
+    border: 1px solid #F9BA3E;
+    box-shadow: 0px 0px 25px 0px #F9BA3E;
+  }
+
+  .progress-wrapper.purple .horizontal-line {
+    background: linear-gradient(90deg, #F9BA3E 0%, #FFE0A4 62%, #FFF4DE 100%);
+  }
+
+  .progress-wrapper.purple .vertical-line {
+    background: linear-gradient(180deg, #F9BA3E 0%, #FFE0A4 62%, #FFF4DE 100%);
+  }
+
+  .progress-wrapper.purple .ellipse {
+    -webkit-text-stroke-color: #F9BA3E;
+    -webkit-text-strokeWidth: 0.5px;
+    box-shadow: 0px 0px 5px 0px #F9BA3E;
+    box-shadow: 0px 0px 10px 0px #F9BA3E;
+  }
+
+  .why-us-active {
+
+    box-shadow: 0px 0px 25px 0px #45F336;
+
+    box-shadow: 0px 0px 50px 0px #45F336;
+
+    background: radial-gradient(50% 50% at 50% 50%, #0A2D07 0%, #0A2D07 0.01%, #1B6D14 100%);
+    border: 1px solid #45F336;
+    box-shadow: 0px 0px 25px 0px #45F336;
+
+    box-shadow: 0px 0px 50px 0px #45F33640;
+    color: white;
+    cursor: pointer;
+  }
+
+}

@@ -68,14 +68,14 @@ const Header = ({
       } ${
         lastScrollTop > 100 && isUp
           ? "bg-[#12171c] visible pt-0"
-          : " bg-trans-dark/[.12] visible pt-[53px]"
+          : " bg-transparent visible pt-[53px]"
       } `}
     >
       <Logo
         className={`absolute left-[50px] xl:left-[150px] font-normal  transition-all duration-300 ${
           lastScrollTop > 100 && isUp
             ? "bg-[#12171c] visible  top-[5px]"
-            : " bg-trans-dark/[.12] visible  top-[35px]"
+            : " bg-transparent visible  top-[35px]"
         }`}
       />
       <ul

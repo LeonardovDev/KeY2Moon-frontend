@@ -12,9 +12,22 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
       colors: {
-        darkblue: "#092332",
-        lightyellow: "#F3AD35",
+        "darkblue": "#092332",
+        "lightyellow": "#F3AD35",
+        "trans-dark": "#78797B",
+        "main-purple": "#801eff",
+        "main-back": "#000211",
+        "main-red": "#f33592",
+        "main-green": "#45f336",
+        "item-back": "#252525",
+        "footer-text": "#aeaeae",
+        "mobile-header": "rgb(32 34 39)",
       },
       fontFamily: {
         prompt: ['var(--font-prompt)'],

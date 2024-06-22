@@ -9,6 +9,7 @@ import OfferContainer from "@/containers/OfferContainer";
 import PartnerContainer from "@/containers/PartnerContainer";
 import ServiceContainer from "@/containers/ServiceContainer";
 import WhyUsContainer from "@/containers/WhyUsContainer";
+import SubmitContainer from "@/containers/SubmitContainer";
 
 export default function Home() {
   const [selectedMenu, setSelectedMenu] = useState(0);
@@ -97,7 +98,8 @@ export default function Home() {
       <PartnerContainer />
       <WhyUsContainer />
       <OfferContainer ref={blogRef} />
-      <GetTouchContainer refer={contactRef} handleTop={handleTop} />
+      <SubmitContainer ref={contactRef} />
+      <GetTouchContainer handleTop={handleTop} />
     </div>
   );
 }
