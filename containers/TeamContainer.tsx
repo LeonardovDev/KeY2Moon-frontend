@@ -3,6 +3,8 @@ import { Flex, Typography } from "antd";
 import Image from "next/image";
 
 import SolutionUnderline from "@/public/Images/OfferPage/SolutionUnderline.svg";
+import MemberCard from "@/components/MemberCard";
+import ServiceCard from "@/components/ServiceCard";
 
 const TeamContainer = () => {
   return (
@@ -29,7 +31,40 @@ const TeamContainer = () => {
           Take the next step forward achieving your personal and professional
           aspirations with KeY2Moon Book it has survived not only five centuries
         </Typography>
+        <div className="flex space-x-[50px] 2xl:space-x-[100px] pt-[100px]">
+          <MemberCard
+            name="Bonnie Bennet"
+            respons="Marketing Expert"
+            avatar="/Images/TeamPage/Bonnie_Bennet.png"
+          />
+          <MemberCard
+            name="Bonnie Bennet"
+            respons="UI/UX Expert"
+            avatar="/Images/TeamPage/Caroline.png"
+          />
+          <MemberCard
+            name="Bonnie Bennet"
+            respons="Business Analysist"
+            avatar="/Images/TeamPage/Marget_Williams.png"
+          />
+        </div>
       </Flex>
+
+      <div
+        className="flex flex-col xl:flex-row justify-center items-center space-x-0 xl:space-x-[30px]
+         space-y-[20px] xl:space-y-0"
+      >
+        <ServiceCard
+          title="Expert instructor live classes here!"
+          description="When an unknown printer took a gallery offer area type make specimen book has survived type make"
+          avatar="/Images/TeamPage/Serve1.png"
+        />
+        <ServiceCard
+          title="Expert instructor live classes here!"
+          description="When an unknown printer took a gallery offer area type make specimen book has survived type make"
+          avatar="/Images/TeamPage/Serve1.png"
+        />
+      </div>
     </>
   );
 };
