@@ -6,15 +6,25 @@ interface IMemberCard {
   avatar: string;
 }
 
+import { Ripple, Tooltip, initTWE } from "tw-elements";
+
+initTWE({ Ripple, Tooltip });
+
 const MemberCard = ({ name, respons, avatar }: IMemberCard) => {
   return (
     <div
-      className="bg-[url('/Images/TeamPage/CardBack.png')] xl-[] xl:w-[324px] xl:h-[466px]
+      className="bg-[url('/Images/TeamPage/CardBack.png')] w-[250px] xl:w-[324px] h-[200px] md:h-[360px] xl:h-[466px]
                   relative flex justify-center items-center
-                  transition-all duration-300"
+                  transition-all duration-300 shadow-md cursor-pointer rounded-[15px]"
     >
-      <img src={avatar} className="absolute top-0" />
-      <div className="flex flex-col space-y-[10px] bg-[url('/Images/TeamPage/NameBox.png')] absolute left-[20px] bottom-[23px] justify-center items-center w-[285px] h-[111px]">
+      <img
+        src={avatar}
+        className="absolute top-0 opacity-0 md:opacity-100 transition-all duration-100"
+      />
+      <div
+        className="flex flex-col space-y-[10px] bg-[url('/Images/TeamPage/NameBox.png')] absolute left-[-2px] xl:left-[20px] bottom-[-2px] xl:bottom-[23px] 
+      justify-center items-center w-[285px] h-[111px] transition-all duration-300"
+      >
         <h1 className=" font-medium text-[20px] text-lightyellow">{name}</h1>
         <h2 className=" font-normal text-[16px] text-[#6E6E6E]">{respons}</h2>
       </div>

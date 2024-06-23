@@ -17,6 +17,7 @@ import { ToastContainer, toast } from "react-toastify";
 import Logo from "@/components/Logo";
 
 import LoadingSpinner from "@/components/LoadingSpinner";
+import HomeUnderlineLong from "@/public/Images/Homepage/HomeUnderlineLong.svg";
 
 interface IGetTouchContainerProps {
   handleTop: (e: React.MouseEvent<HTMLElement>) => void;
@@ -51,10 +52,25 @@ const GetTouchContainer: React.FC<IGetTouchContainerProps> = ({
   };
 
   return (
-    <div className="flex flex-col space-y-0 w-full">
-      <Flex className="px-[50px] py-[107px] h-[703px] space-x-0 bg-[#FAF9F6] justify-center">
+    <div className="flex flex-col pt-[25px] space-y-0 w-full bg-[#FAF9F6]">
+      <h1 className=" text-[32px] font-medium pb-[30px] text-center mb-5">
+        <p className="inline-block relative text-[32px]">
+          <span
+            className={`text-[32px] leading-[0px] pr-[5px] font-medium font-poppins text-black
+        }`}
+          >
+            Our Blogs
+          </span>
+          <Image
+            src={HomeUnderlineLong}
+            alt="underline"
+            className="absolute bottom-[-22px] w-full h-auto"
+          />
+        </p>{" "}
+      </h1>
+      <Flex className="px-[50px] pb-[107px] space-x-0  justify-center">
         <ToastContainer />
-        <Flex className="bg-[#F0E1C9] items-end justify-center relative hidden md:flex">
+        <Flex className="bg-[#F0E1C9] items-end justify-center relative hidden md:flex h-[490px]">
           <Image
             src={Ellipse}
             alt="ellipse"
@@ -66,7 +82,7 @@ const GetTouchContainer: React.FC<IGetTouchContainerProps> = ({
             className=" z-10"
           />
         </Flex>
-        <div className="flex-1 bg-[#092332] pt-[30px] px-[40px] max-w-[690px] min-w-[480px]">
+        <div className="flex-1 flex justify-center flex-col bg-[#092332] py-[15px] px-[40px] max-w-[690px] min-w-[480px]">
           <Typography className="text-white text-[24px] font-semibold leading-[40px] font-prompt">
             What’s our real client stories <br />
             About our work & passion
@@ -159,9 +175,9 @@ const GetTouchContainer: React.FC<IGetTouchContainerProps> = ({
             )}
           </button>
         </Flex>
-        <Flex className="flex-1 items-center space-x-[20px] pt-[30px] pr-[70px] md:pr-[200px] xl:pr-[600px]">
+        <Flex className="flex-1 items-center space-x-[20px] pt-[30px] pr-[70px] xl:pr-[450px] 2xl:pr-[600px]">
           <Image src={C} alt="c" className="mt-[3px]" />
-          <Typography className="flex-1 text-white text-[20px]">
+          <Typography className="flex-1 text-white text-[16px] xl:text-[20px]">
             2024 KeY2Moon Solutions. All Rights reserved
           </Typography>
           <Image src={Camera} alt="c" className=" cursor-pointer" />

@@ -1,15 +1,11 @@
-import React, { RefObject, useState } from "react";
+import React, { RefObject, useState, forwardRef } from "react";
 import Image from "next/image";
 
 import HomeUnderlineLong from "@/public/Images/Homepage/HomeUnderlineLong.svg";
 import { Button, Input, Typography } from "antd";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
 
-interface ISubmitContainerProps {
-  ref: RefObject<HTMLDivElement>;
-}
-
-const SubmitContainer: React.FC<ISubmitContainerProps> = ({ ref }) => {
+const SubmitContainer = forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <div
       className="w-full py-[63px] flex flex-col justify-center items-center space-y-[12px] px-[30px]"
@@ -93,6 +89,6 @@ const SubmitContainer: React.FC<ISubmitContainerProps> = ({ ref }) => {
       </div>
     </div>
   );
-};
+});
 
 export default SubmitContainer;

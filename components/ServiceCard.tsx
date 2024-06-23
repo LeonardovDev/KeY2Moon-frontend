@@ -10,11 +10,16 @@ interface IServiceCard {
 
 const ServiceCard = ({ title, description, avatar }: IServiceCard) => {
   return (
-    <div className="flex w-[570px] h-[300px] md:h-[368px] px-[37px] py-[13px] md:py-[44px] border-[1px] rounded-[15px] shadow-md space-x-[26px]">
-      <img src={avatar} className="w-[190px] h-[190px]" />
+    <div className="flex w-[500px] md:w-[570px] h-[300px] md:h-[368px] px-[20px] md:px-[37px] py-[13px] md:py-[44px] border-[1px] rounded-[15px] shadow-md space-x-[26px]">
+      <img
+        src={avatar}
+        className="w-[150px] h-[150px] md:w-[190px] md:h-[190px]"
+      />
       <div className="flex-1 flex flex-col space-y-[20px]">
-        <h1 className="text-[20px] font-medium leading-[30px]">{title}</h1>
-        <p className="text-[20px] font-normal leading-[30px] text-[#6E6E6E]">
+        <h1 className=" text-[18px] md:text-[20px] font-medium leading-[30px]">
+          {title}
+        </h1>
+        <p className="text-[18px] md:text-[20px] font-normal leading-[30px] text-[#6E6E6E]">
           {description}
         </p>
         <button
