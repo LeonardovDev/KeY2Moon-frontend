@@ -6,10 +6,6 @@ interface IMemberCard {
   avatar: string;
 }
 
-import { Ripple, Tooltip, initTWE } from "tw-elements";
-
-initTWE({ Ripple, Tooltip });
-
 const MemberCard = ({ name, respons, avatar }: IMemberCard) => {
   return (
     <div

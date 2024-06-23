@@ -2,7 +2,7 @@ import React, { RefObject, useState, forwardRef } from "react";
 import Image from "next/image";
 
 import HomeUnderlineLong from "@/public/Images/Homepage/HomeUnderlineLong.svg";
-import { Button, Input, Typography } from "antd";
+import { Typography } from "antd";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
 
 const SubmitContainer = forwardRef<HTMLDivElement>((props, ref) => {
